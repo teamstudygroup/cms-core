@@ -16,7 +16,7 @@ public class Test {
 		int f=2;
 		int g=5;
 		
-		System.out.println("");
+		System.out.println("Testing...");
 
 	}
 
