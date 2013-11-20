@@ -5,35 +5,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cab Management System</title>
-<script language="javascript">
-function formSubmit()
-{
-	alert("hi");
-	alert(document.getElementById("command"));
-	document.getElementById("command").submit();
-	
-}
-</script>
 </head>
 <body style="text-align: center; border-width: 1px;">
-
-
 <h1>Cab Management System</h1>
 <br/><br/><br/><br/><br/>
-
 	<table>
 		<tr>
 			<td>
 				<form method="post" action="login.htm">
 				<table border="1px">
 					<tr>
-						<td>UserName:</td>
-						<td><input type="text" id="usesrname" value=""/></td>
+						<td>UserName : </td>
+						<td><input type="text" id="usesrname" name="usesrname" /></td>
 					</tr>
 					
 					<tr>
-						<td>Password:</td>
-						<td><input type="password" id="password" value=""/></td>
+						<td>Password : </td>
+						<td><input type="password" id="password" name="password" /></td>
 					</tr>
 					<tr>
 						<td>
