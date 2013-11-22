@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.studygroup.cms.domain.UserDetails;
 import com.studygroup.cms.interfaces.ILoginDAO;
 
+@Transactional
 @Repository("loginDAO")
 public class LoginDAO implements ILoginDAO {
 	
@@ -38,27 +39,27 @@ public class LoginDAO implements ILoginDAO {
 	}
 	
 	
-	@Transactional
+	
 	public void addUser(UserDetails user) {
         sessionFactory.getCurrentSession().save(user);
     }
 	
-	@Transactional
+	
 	public List<UserDetails> listUser() {
 		 //sessionFactory.getCurrentSession().createQuery("from UserDetails").list()
 		System.out.println("Inside List User....");
 		//Session s = sessionFactory.openSession();
-		if(sessionFactory != null){
+		if(sessionFactory.getCurrentSession() != null){
 			System.out.println("Able to get session factory instance ....");
 			
 		} else {
 			System.out.println("Can't get session from factory instance ....");
 		}
-        return null;
+        return sessionFactory.getCurrentSession().createQuery("from UserDetails").list();
         
     }
 	
-	@Transactional
+	
 	public void removeUser(Integer id) {
         UserDetails user = (UserDetails) sessionFactory.getCurrentSession().load(
                 UserDetails.class, id);
