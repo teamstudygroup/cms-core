@@ -21,6 +21,11 @@
         <put-attribute name="title" value="Home"></put-attribute>  
         <put-attribute name="body" value="/WEB-INF/pages/home.jsp"></put-attribute>  
     </definition>  
+    
+    <definition extends="regn.definition" name="index">  
+        <put-attribute name="title" value="Home"></put-attribute>  
+        <put-attribute name="body" value="/WEB-INF/pages/index.jsp"></put-attribute>  
+    </definition>
       
     <definition extends="base.definition" name="searchVehicle">  
         <put-attribute name="title" value="Search Vehicle"></put-attribute>  
